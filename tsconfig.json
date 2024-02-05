@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
     "target": "ES2020",
-    "module": "NodeNext",
-    "moduleResolution": "NodeNext",
+    "module": "ESNext",
+    "moduleResolution": "Node",
     "baseUrl": ".",
     "paths": {
       "@src/*": ["src/*"]
@@ -15,7 +15,10 @@
     "strict": true,
     "noImplicitAny": true,
 
-    "skipLibCheck": true
+    "skipLibCheck": true,
+
+    "noEmit": true,
+    "allowImportingTsExtensions": true
   },
   "exclude": ["node_modules", "dist", "coverage"],
   "include": ["src/**/*.ts"]
