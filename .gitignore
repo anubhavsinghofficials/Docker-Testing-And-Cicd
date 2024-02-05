@@ -1,0 +1,15 @@
+# Node.js
+node_modules/
+
+# Optional: ignore environment-specific files
+.env
+
+# Ignore production build folder
+build/
+dist/
+
+# Testing
+coverage/
+
+# Markdown file
+*.md
