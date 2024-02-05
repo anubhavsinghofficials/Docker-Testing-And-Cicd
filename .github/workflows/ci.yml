@@ -13,6 +13,9 @@ jobs:
       matrix:
         node-version: [16.x, 20.x]
 
+    env:
+      DB_URL: ${{ secrets.DB_URL }}
+
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v2
