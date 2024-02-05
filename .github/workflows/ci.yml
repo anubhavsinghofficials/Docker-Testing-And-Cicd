@@ -1,0 +1,33 @@
+name: furnish-ci
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test-and-build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [16.x, 20.x]
+
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+
+      - name: Setup Nodejs envt ${{ matrix.node-version }}
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node-version }}
+          # or directly 14, 16 etc
+
+      - name: Install Dependencies
+        run: npm ci
+
+      - name: Test the app
+        run: npm run test
+
+      - name: Build the app
+        run: npm run build
