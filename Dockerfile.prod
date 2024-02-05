@@ -1,0 +1,16 @@
+# STAGE - 1: BUILD TS TO JS
+FROM node:alpine as BUILD
+WORKDIR /usr/app
+COPY package*.json .
+RUN npm i
+COPY . .
+RUN npm run build
+
+# STAGE - 2: START JS SERVER
+FROM node:alpine
+WORKDIR /usr/app
+COPY package*.json .
+RUN npm i --only=production
+COPY --from=BUILD /usr/app/dist .
+EXPOSE 8000
+CMD ["node", "./server.js"]

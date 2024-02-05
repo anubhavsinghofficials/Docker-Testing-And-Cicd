@@ -1,0 +1,27 @@
+services:
+  back-end:
+    image: node-back-end-dev
+    container_name: back-end-container-dev
+    build:
+      context: .
+      dockerfile: Dockerfile.dev
+    ports:
+      - "8000:8000"
+    env_file:
+      - ./.env
+    volumes:
+      - .:/usr/app
+      - /usr/app/node_modules
+    depends_on:
+      - my-mongo
+    restart: always
+
+  my-mongo:
+    image: mongo:latest
+    container_name: mongodb-container-dev
+    volumes:
+      - mongo-db-volume:/data/db
+    restart: always
+
+volumes:
+  mongo-db-volume:
