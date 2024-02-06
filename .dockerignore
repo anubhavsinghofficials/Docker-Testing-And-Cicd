@@ -1,0 +1,25 @@
+# Ignore node_modules, as they can be installed inside the Docker image
+node_modules
+
+# Ignore development and test-related files
+*.log
+*.vscode
+*.idea
+node_modules
+coverage
+.nyc_output
+tests
+test
+__tests__
+*.test.ts
+*.test.js
+*.spec.ts
+*.spec.js
+
+# Ignore build and compilation artifacts
+dist
+build
+out
+lib
+*.tsbuildinfo
+
