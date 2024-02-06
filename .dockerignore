@@ -23,3 +23,23 @@ out
 lib
 *.tsbuildinfo
 
+# Ignore local configuration files
+.env
+.env.local
+.env.*.local
+
+# Ignore package manager files
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Ignore Docker-specific files
+.dockerignore
+Dockerfile*
+.docker
+.dockerignore
+.dockerignore.sample
+
+# Ignore version control files and directories
+.git
+.gitignore
