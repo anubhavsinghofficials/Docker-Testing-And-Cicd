@@ -1,3 +1,6 @@
+![docker-github-actions-img](https://repository-images.githubusercontent.com/225716226/6762dd00-6aa2-11ea-912d-7cfb0e2457f6)
+
+
 A simple rest api to demonstrate Dockerization and Continuous Integration with Github Actions
 
 ### Technonogies Used
