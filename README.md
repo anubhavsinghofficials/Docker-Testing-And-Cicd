@@ -23,3 +23,11 @@ Install Packages
 ```bash
 npm install
 ```
+
+Run the development server:
+
+```bash
+docker compose -f docker-compose.dev.yml up
+```
+
+The server will run on [http://localhost:8000](http://localhost:8000)
